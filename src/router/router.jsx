@@ -5,6 +5,7 @@ import Timeline from '../page/timeline/Timeline';
 import Stats from '../page/stats/Stats';
 import Home from '../page/home/Home';
 import NotFound from '../page/notFound/NotFound';
+import FriendDetiles from '../page/friendDetiles/FriendDetiles';
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/friend/:id",
+                element: <FriendDetiles />,
             },
             {
                 path: "/timeline",
