@@ -1,10 +1,13 @@
 import React from 'react';
+import Bennar from '../../conponents/homepage/Bennar';
+import TrandingFriend from '../../conponents/homepage/TrandingFriend';
 
 const Home = () => {
     return (
-        <div>
-            home
-        </div>
+       <>
+       <Bennar/>
+       <TrandingFriend/>
+       </>
     );
 };
 
