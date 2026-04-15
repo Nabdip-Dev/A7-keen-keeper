@@ -42,12 +42,12 @@ const FriendDetiles = () => {
     };
 
     return (
-        <div className="p-6 min-h-[80vh] w-[1110px] mx-auto flex items-center">
+        <div className="p-6 min-h-[80vh] max-w-[1110px] mx-auto flex items-center">
 
-            <div className="grid grid-rows md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
 
                 {/* ================= LEFT ================= */}
-                <div className="col-span-1 space-y-4">
+               <div className="col-span-3 md:col-span-2 lg:col-span-1 space-y-4 flex flex-col items-center">
 
                     <div className="flex flex-col bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] p-5 rounded-xl text-center items-center">
                         <img src={friend.picture} className="w-16 h-16 rounded-full mb-2" />
@@ -66,13 +66,13 @@ const FriendDetiles = () => {
                         </p>
                     </div>
 
-                    <div className="space-y-3 text-sm">
+                    <div className="space-y-3 text-sm w-full flex flex-col lg:flex-col md:flex-row gap-0 md:gap-10 lg:gap-0">
 
-                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] py-2 rounded"><RiNotificationSnoozeLine />Snooze 2 Weeks</button>
+                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] h-10 rounded"><RiNotificationSnoozeLine />Snooze 2 Weeks</button>
 
-                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] py-2 rounded"><FaArchive />Archive</button>
+                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] h-10 rounded"><FaArchive />Archive</button>
 
-                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-red-100 border border-[#E9E9E9] text-red-500 py-3 rounded"><RiDeleteBin6Line />Delete</button>
+                        <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] text-red-500 h-10 rounded"><RiDeleteBin6Line />Delete</button>
                         
                     </div>
 
@@ -82,7 +82,7 @@ const FriendDetiles = () => {
                 <div className="col-span-3 space-y-4">
 
                     {/* STATS */}
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
                         <div className="bg-white py-8 px-5 rounded-xl text-center shadow-[0_2px_10px_rgba(0,0,0,0.06)]">
                             <h1 className="text-2xl font-bold">{friend.days_since_contact}</h1>
@@ -124,7 +124,7 @@ const FriendDetiles = () => {
                     <div className="bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] p-5 rounded-xl">
                         <h3 className="font-semibold mb-3">Quick Check-In</h3>
 
-                        <div className="grid grid-cols-3 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
                             <button
                                 onClick={() => handleAction("Call")}

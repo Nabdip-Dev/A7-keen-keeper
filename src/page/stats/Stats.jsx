@@ -2,7 +2,6 @@ import React from 'react';
 import { Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 const Stats = () => {
-
     const timeline = JSON.parse(sessionStorage.getItem("timeline")) || [];
 
     const call = timeline.filter(item => item.type === "Call").length;
@@ -16,18 +15,31 @@ const Stats = () => {
     ];
 
     return (
-        <div className='min-h-[70vh] max-w-[672px] flex flex-col mx-auto justify-center items-center px-8 md:px-0 md:py-6'>
-            <h1 className="w-full text-left text-xl font-bold mb-6">
+        <div className='min-h-[70vh] w-full max-w-[672px] flex flex-col mx-auto justify-center items-center px-4 md:px-0 md:py-6'>
+            
+            <h1 className="w-full text-left text-2xl md:text-5xl font-bold mb-6">
                 Friendship Analytics
             </h1>
-            <div className='bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] rounded-xl' style={{ width: '672px', height: '400px',paddingBottom: '24px'}}>
-                <ResponsiveContainer>
-                    <PieChart>
-                        <Pie data={data} dataKey="value" innerRadius={80} outerRadius={120} />
-                        <Legend />
-                        <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
+
+            <div className='bg-white w-full shadow-[0_2px_10px_rgba(0,0,0,0.06)] rounded-xl px-4 md:px-8 py-6'>
+                
+               <h1 className='text-xl font-semibold'>By Interaction Type</h1>
+                <div className="w-full h-[300px] sm:h-[350px] md:h-[300px]">
+                    <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
+                            <Pie
+                                data={data}
+                                dataKey="value"
+                                innerRadius="60%"
+                                outerRadius="80%"
+                                stroke="none"
+                            />
+                            <Legend />
+                            <Tooltip />
+                        </PieChart>
+                    </ResponsiveContainer>
+                </div>
+
             </div>
         </div>
     );
