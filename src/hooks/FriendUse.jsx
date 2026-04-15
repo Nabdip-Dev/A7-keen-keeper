@@ -13,7 +13,7 @@ const FriendUse = () => {
             setTimeout(() => {
                 setFends(data)
                 setLoding(false)
-            }, 1000)
+            }, 500)
         }
         fetchData()
     }, [])

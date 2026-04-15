@@ -2,29 +2,66 @@ import React, { useEffect, useState } from 'react';
 import { FiPhoneCall } from 'react-icons/fi';
 import { MdOutlineTextsms } from 'react-icons/md';
 import { LuVideo } from 'react-icons/lu';
+import { FaRegFaceFrownOpen } from 'react-icons/fa6';
+import { useNavigate } from 'react-router';
 
 const Timeline = () => {
     const [timeline, setTimeline] = useState([]);
+    const navigate = useNavigate();
+
+    const loadData = () => {
+        const data = JSON.parse(sessionStorage.getItem("timeline")) || [];
+        setTimeline(data);
+    };
 
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem("timeline")) || [];
+        loadData();
 
-        console.log("Loaded:", data); // debug
+        const handleUnload = () => {
+            sessionStorage.removeItem("timeline");
+        };
 
-        setTimeline(data);
+        window.addEventListener("beforeunload", handleUnload);
+
+        return () => {
+            window.removeEventListener("beforeunload", handleUnload);
+        };
     }, []);
 
     return (
+
         <div className="p-6 bg-gray-100 min-h-screen">
 
-            <div className="bg-white p-5 rounded-xl">
+            <div className="p-5 rounded-xl">
                 <h2 className="text-xl font-bold mb-4">Timeline</h2>
-
                 {timeline.length === 0 ? (
-                    <p className="text-gray-400">No activity yet</p>
+                    <div className='min-h-[60vh] flex justify-center items-center text-center'>
+                        <div className="flex flex-col justify-center items-center text-center py-10 px-6 border-white rounded-xl shadow-sm border-2">
+
+                            <div className="text-5xl text-gray-300 mb-3">
+                                <FaRegFaceFrownOpen />
+                            </div>
+
+                            <h2 className="text-xl font-semibold text-gray-700">
+                                No activity yet
+                            </h2>
+
+                            <p className="text-gray-400 text-sm mt-1">
+                                Start calling, texting or video chatting to see your timeline here
+                            </p>
+
+                            <button
+                                onClick={() => navigate("/")}
+                                className="mt-5 cursor-pointer px-4 py-2 bg-black text-white text-sm rounded hover:bg-gray-800 transition"
+                            >
+                                Go Home
+                            </button>
+
+                        </div>
+                    </div>
                 ) : (
                     timeline.map((item, index) => (
-                        <div key={index} className="flex items-center gap-3 bg-gray-100 p-3 rounded mb-2">
+                        <div key={index} className="flex items-center gap-3 border border-[#E9E9E9] bg-white p-3 rounded mb-2">
 
                             {item.type === "Call" && <FiPhoneCall />}
                             {item.type === "Text" && <MdOutlineTextsms />}
