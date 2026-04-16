@@ -38,7 +38,7 @@ const FriendDetiles = () => {
         const updatedData = [...oldData, newEvent];
 
         sessionStorage.setItem("timeline", JSON.stringify(updatedData));
-        toast.success(`${type} saved successfully!`);
+        toast.success(`${type} with ${friend.name}`);
     };
 
     return (
@@ -47,7 +47,7 @@ const FriendDetiles = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
 
                 {/* ================= LEFT ================= */}
-               <div className="col-span-3 md:col-span-2 lg:col-span-1 space-y-4 flex flex-col items-center">
+                <div className="col-span-3 md:col-span-2 lg:col-span-1 space-y-4 flex flex-col items-center">
 
                     <div className="flex flex-col bg-white shadow-[0_2px_10px_rgba(0,0,0,0.06)] p-5 rounded-xl text-center items-center">
                         <img src={friend.picture} className="w-16 h-16 rounded-full mb-2" />
@@ -57,9 +57,18 @@ const FriendDetiles = () => {
                             {friend.status}
                         </span>
 
-                        <span className="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full mt-2">
-                            {friend.tags[0]}
-                        </span>
+                        <div className="flex flex-wrap gap-2 mt-2 justify-center">
+                            {
+                                friend.tags.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="bg-green-100 capitalize text-green-600 text-xs px-3 py-1 rounded-full"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))
+                            }
+                        </div>
 
                         <p className="text-gray-400 text-xs mt-2">
                             {friend.bio}
@@ -73,7 +82,7 @@ const FriendDetiles = () => {
                         <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] h-10 rounded"><FaArchive />Archive</button>
 
                         <button className="w-full cursor-pointer flex gap-1 font-bold justify-center items-center text-center bg-white border border-[#E9E9E9] text-red-500 h-10 rounded"><RiDeleteBin6Line />Delete</button>
-                        
+
                     </div>
 
                 </div>

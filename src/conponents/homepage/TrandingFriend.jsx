@@ -33,13 +33,13 @@ const TrandingFriend = () => {
                 </div>
 
             </div>
-
+            <h1 className='text-2xl font-bold mb-6'>Your Friends</h1>
             <div>
                 {loading == true ? <div className='h-[30vh] flex justify-center items-center'><RingLoader /></div> : <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto justify-items-center'>
                     {
                         fends.map((fnd, index) => {
                             return (
-                               <FriendCard fnd={fnd} key={index}/>
+                                <FriendCard fnd={fnd} key={index} />
                             )
                         })
                     }

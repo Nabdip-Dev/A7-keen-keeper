@@ -17,9 +17,18 @@ const FriendCard = ({ fnd, index }) => {
                 {fnd.days_since_contact} days ago
             </p>
 
-            <span className="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full">
-                {fnd.tags[0]}
-            </span>
+            <div className="flex flex-wrap gap-2 mt-2 justify-center">
+                {
+                    fnd.tags.map((tag, index) => (
+                        <span
+                            key={index}
+                            className="bg-green-100 capitalize text-green-600 text-xs px-3 py-1 rounded-full"
+                        >
+                            {tag}
+                        </span>
+                    ))
+                }
+            </div>
 
             {/* Status Button */}
             <div className="mt-3">
