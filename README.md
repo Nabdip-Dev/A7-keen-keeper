@@ -5,23 +5,43 @@
 ### 💙 Stay connected. Never lose touch.
 
 <p>
-Track your friendships, log interactions, and visualize your connection journey — all in one place.
+Track your friendships, log meaningful interactions, and visualize your relationship journey — all in one place. Build stronger connections by staying consistent and mindful.
 </p>
 
 <br/>
 
-<img src="./src/assets/home.png" width="85%" style="border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.15);" />
+<a href="https://nabdip-keen-keeper.netlify.app/" target="_blank">
+  <img src="./src/assets/home.png" 
+       width="85%" 
+       style="border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.15);" />
+</a>
 
 <br/><br/>
 
-<div align="center">
+<div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
 
-<a href="https://your-live-site-link.com" target="_blank">
-  <img src="https://img.shields.io/badge/🌐%20Explore%20Live%20Project-1E293B?style=for-the-badge&logo=google-chrome&logoColor=38BDF8" />
+<a href="https://nabdip-keen-keeper.netlify.app/" target="_blank" style="
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color:white;
+  padding:12px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-block;
+  margin:5px;
+">
+  🌐 Live Project
 </a>
 
-<a href="https://github.com/your-username/your-repo" target="_blank">
-  <img src="https://img.shields.io/badge/📦%20Source%20Code-111827?style=for-the-badge&logo=github&logoColor=F9FAFB" />
+<a href="https://github.com/Nabdip-Dev/A7-keen-keeper" target="_blank" style="
+  background:#111827;
+  color:white;
+  padding:12px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-block;
+  margin:5px;
+">
+  💻 Source Code
 </a>
 
 </div>
@@ -48,8 +68,8 @@ Track your friendships, log interactions, and visualize your connection journey 
 
 <br/>
 
-<img src="./src/assets/stats.png" width="45%" style="border-radius:12px; margin:10px;" />
-<img src="./src/assets/footer.png" width="45%" style="border-radius:12px; margin:10px;" />
+<img src="./src/assets/stats.png" width="28%" style="border-radius:12px; margin:10px;" />
+<img src="./src/assets/footer.png" width="28%" style="border-radius:12px; margin:10px;" />
 
 </div>
 
@@ -57,14 +77,9 @@ Track your friendships, log interactions, and visualize your connection journey 
 
 ## ⚡ Why This Web?
 
-Because friendships fade when we stop keeping track.
+<p>Friendships don’t fade overnight — they fade when we stop paying attention.
 
-This app helps you:
-
-* Stay consistent
-* Remember important interactions
-* Build stronger relationships
-
+Keen Keeper helps you stay intentional about your relationships by reminding you to connect, track, and care. Whether it’s a quick call or a meaningful conversation, every interaction matters.</p>
 ---
 
 ## 🛠️ Tech Stack
@@ -100,7 +115,7 @@ This app helps you:
 
 <div align="center">
 
-🚀 Try the live app
-⭐ Star the repo if you like it
+🚀 Explore the Live App  
+⭐ Star the repo if you find it useful
 
 </div>

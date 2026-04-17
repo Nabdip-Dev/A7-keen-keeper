@@ -2,7 +2,7 @@ import React from 'react';
 
 const Bennar = () => {
     return (
-        <div className="py-20 text-center">
+        <div className="py-20 px-8 text-center">
            
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
                 Friends to keep close in your life
