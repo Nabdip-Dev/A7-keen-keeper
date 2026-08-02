@@ -5,7 +5,7 @@
 ### 💙 Stay connected. Never lose touch.
 
 <p>
-Track your friendships, log meaningful interactions, and visualize your relationship journey — all in one place. Build stronger connections by staying consistent and mindful.
+Track your friendships, log meaningful interactions, and visualize your relationship journey — all in one place. Build stronger connections by staying consistent and mindful .
 </p>
 
 <br/>
